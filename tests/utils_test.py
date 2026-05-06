@@ -29,4 +29,6 @@ agent2 = agents.Agent(environment=env, strategy=strategy.EpsilonGreedy(0.3))
 all_agents = [agent1, agent2]
 
 util.compare_policies(agent_list=all_agents, steps=1000)
-graph.compare_optimal_action(agent_list=all_agents, plot=True)
+fig = graph.plot_agent_reward_history(agent1, plot=True)
+
+util.save_image_to_disk(fig, "t3")

@@ -45,7 +45,7 @@ def run_experiment(agent: Agent, steps: int):
         record_logs("Experiment Run Completed.\n")
 
 
-def save_image_to_disk(filename: str):  # FORCES TO SAVE IN RESULTS
+def save_image_to_disk(fig, filename: str):  # FORCES TO SAVE IN RESULTS
     """
     Saves the plot
     Arg : 
@@ -57,7 +57,9 @@ def save_image_to_disk(filename: str):  # FORCES TO SAVE IN RESULTS
             filename += '.png'
 
         save_path = "results/" + filename
-        plt.savefig(save_path, bbox_inches='tight', dpi=300)
+        fig.savefig(save_path, bbox_inches='tight', dpi=300)
+        print("Image saved")
+        plt.close(fig)
         record_logs(f"Image Saved : {save_path}.")
 
 

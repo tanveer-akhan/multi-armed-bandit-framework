@@ -11,7 +11,7 @@ class UCB(Strategy):
 
     def select_arm(self, agent):
         for i in range(len(agent.action_counts)):
-            if agent.counts[i] == 0:
+            if agent.action_counts[i] == 0:
                 return i
         total_count = np.sum(agent.action_counts)
 

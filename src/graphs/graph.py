@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import src.utils.util as util
 
 
 def put_label(ax, title, xlabel=None, ylabel=None, plot=False):
@@ -25,8 +26,10 @@ def put_label(ax, title, xlabel=None, ylabel=None, plot=False):
     if plot is True:
         plt.show()
 
+# GOOD
 
-def plot_single_arm_estimate(agent, arm_no, max_steps=None, ax=None, custom_label=None, custom_title=None, plot=False):
+
+def plot_single_arm_estimate(agent, arm_no, max_steps=None, ax=None, fig=None, custom_label=None, custom_title=None, plot=False):
     """
     Plot graph for one specific arm
     Args :
@@ -60,8 +63,10 @@ def plot_single_arm_estimate(agent, arm_no, max_steps=None, ax=None, custom_labe
 
     put_label(ax, custom_title, plot=plot)
 
+    return fig
 
-def plot_multiple_arm_estimate(agent, ax=None, only_top=False, top_count=3, max_steps=None, custom_label=None, custom_title=None, plot=False):
+
+def plot_multiple_arm_estimate(agent, ax=None, fig=None, only_top=False, top_count=3, max_steps=None, custom_label=None, custom_title=None, plot=False):
     """
     Plots estimated rewards of multiple arms of an agent
     Args :
@@ -99,19 +104,28 @@ def plot_multiple_arm_estimate(agent, ax=None, only_top=False, top_count=3, max_
 
     put_label(ax, title=custom_title, plot=plot)
 
+    return fig
 
-def plot_agent_reward_history(reward_history, title=None, label=None, ax=None, xlabel=None, ylabel=None, plot=False):
+# LABEL ISSUE
+
+
+def plot_agent_reward_history(agent, title=None, label=None, ax=None, fig=None, xlabel=None, ylabel=None, plot=False):
     if ax is None:
         fig, ax = plt.subplots()
 
     if title is None:
         title = "Agent's Entire Reward History."
 
-    ax.plot(reward_history, label=label)
+    if label is None:
+        label = f'{agent.strategy.name} : {agent.strategy.value}'
+
+    ax.plot(agent.reward_history, label=label)
     put_label(ax, title=title, xlabel=xlabel, ylabel=ylabel, plot=plot)
 
+    return fig
 
-def plot_comparison(agents, only_top=False, top_count=3, max_steps=None, custom_title=None):
+
+def plot_comparison(agents, only_top=False, top_count=3, max_steps=None, custom_title=None, plot=True):
     """
     Plot graph for one specific arm
     Args :
@@ -131,9 +145,11 @@ def plot_comparison(agents, only_top=False, top_count=3, max_steps=None, custom_
 
     for agent in agents:
         plot_multiple_arm_estimate(agent, ax, only_top=only_top, top_count=top_count,
-                                   max_steps=max_steps, custom_label=agent.strategy.name, custom_title=custom_title)
+                                   max_steps=max_steps, custom_label=agent.strategy.name, custom_title=custom_title, plot=plot)
 
     put_label(ax, title=custom_title)
+
+    return fig
 
 
 def compare_reward_history(agent_list, title="Cumulative reward over steps",
@@ -145,26 +161,30 @@ def compare_reward_history(agent_list, title="Cumulative reward over steps",
         label = f"{current_agent.strategy.name} : {current_agent.strategy.value}"
 
         plot_agent_reward_history(
-            current_agent.reward_history, title=title, label=label, ax=ax, xlabel=xlabel, ylabel=ylabel, plot=False)
+            current_agent.reward_history, title=title, label=label, ax=ax, fig=fig, xlabel=xlabel, ylabel=ylabel, plot=False)
 
     put_label(ax=ax, title=title, xlabel=xlabel, ylabel=ylabel, plot=plot)
 
+    return fig
+
 
 def compare_optimal_action(agent_list, title="Optimal Action over steps steps",
-                           xlabel="Steps", ylabel="Optimal action taken", plot=False):
+                           xlabel="Steps", ylabel="Optimal action taken", plot=False, save_img=False, img_name=None):
 
     fig, ax = plt.subplots()
 
     for current_agent in agent_list:
-        label = f"{current_agent.strategy.name} : {current_agent.strategy.value}"
+        label = f" {current_agent.strategy.name} : {current_agent.strategy.value} "
 
-        plot_optimal_actions(current_agent, ax=ax, title=title, xlabel=xlabel,
+        plot_optimal_actions(current_agent, ax=ax, fig=fig, title=title, xlabel=xlabel,
                              ylabel=ylabel, plot=False)
 
     put_label(ax=ax, title=title, xlabel=xlabel, ylabel=ylabel, plot=plot)
 
+    return fig
 
-def plot_optimal_actions(agent, ax=None, title=None, xlabel=None, ylabel=None, plot=False):
+
+def plot_optimal_actions(agent, ax=None, fig=None, title=None, xlabel=None, ylabel=None, plot=False):
 
     if ax is None:
         fig, ax = plt.subplots()
@@ -176,6 +196,8 @@ def plot_optimal_actions(agent, ax=None, title=None, xlabel=None, ylabel=None, p
 
     put_label(ax=ax, title=title,
               xlabel=xlabel, ylabel=ylabel, plot=plot)
+
+    return fig
 
 
 def plot_cumulative_regret(agent, ax=None, title=None, xlabel=None, ylabel=None, plot=False):
@@ -190,6 +212,7 @@ def plot_cumulative_regret(agent, ax=None, title=None, xlabel=None, ylabel=None,
 
     ax.plot(agent.cumulative_regret, label=agent.strategy.name)
     put_label(ax=ax, title=title, xlabel=xlabel, ylabel=ylabel, plot=plot)
+    return fig
 
 
 def plot_regret(agent, ax=None, title=None, xlabel=None, ylabel=None, plot=False):
@@ -207,3 +230,4 @@ def plot_regret(agent, ax=None, title=None, xlabel=None, ylabel=None, plot=False
     ax.plot(agent.current_regret, label=label)
 
     put_label(ax=ax, title=title, xlabel=xlabel, ylabel=ylabel, plot=plot)
+    return fig

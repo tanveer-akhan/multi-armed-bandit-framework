@@ -34,12 +34,10 @@ all_agents = [agent1, agent2, agent3]
 util.compare_policies(agent_list=all_agents, steps=1000)
 
 # Plot all of their graphs against each other
-graph.compare_reward_history(all_agents, title="Cumulative reward over steps",
-                             xlabel="Steps", ylabel="Total Reward", plot=True)
 
 graph.compare_optimal_action(all_agents, title="Optimal Actions over steps",
                              xlabel="Steps", ylabel="Percentage of Optimal Actions", plot=True)
 
 
 # Save the images
-# util.save_image_to_disk("single_arm_run")
+# util.save_image_to_disk("Optimal Action for multiple strategies")

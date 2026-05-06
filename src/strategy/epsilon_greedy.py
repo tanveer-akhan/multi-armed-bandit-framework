@@ -22,8 +22,8 @@ class EpsilonGreedy(Strategy):
     def select_arm(self, agent):  # TODO:Simplify
         val = np.random.uniform(0, 1)
         if (val <= self.value):
+            random_arm = self.explore.select_arm(agent)
+            return random_arm            
+        else:
             arm = self.exploit.select_arm(agent)
             return arm.item()
-        else:
-            random_arm = self.explore.select_arm(agent)
-            return random_arm

@@ -26,7 +26,6 @@ class Agent():
     Attributes :
         environment : Environment object
         strategy : Strategy object
-        Strategy object responsible for selecting arms
 
     """
 

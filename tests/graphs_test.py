@@ -23,7 +23,7 @@ np.random.seed(random_seed)
 
 # ========================Code Start==========#
 
-# Create Enviroment
+# Create Environment
 env = environment.Environment(arm_count=10, max_mean=200, s_d=1)
 
 # Create Agent
@@ -36,4 +36,5 @@ util.run_experiment(agent=agent1, steps=1000)
 
 
 # graph.compare_optimal_action([agent1, agent2], plot=True)
-graph.plot_regret(agent=agent1, plot=True)
+fig = graph.plot_regret(agent=agent1, plot=True)
+util.save_image_to_disk(fig=fig, filename="Regret Curve")
