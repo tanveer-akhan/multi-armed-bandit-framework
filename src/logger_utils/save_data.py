@@ -3,7 +3,7 @@ import csv
 from datetime import datetime
 
 CSV_FILE = "results/records_" + \
-    datetime.datetime.now().strftime("%Y_%m_%d_%H_%M_%S") + ".csv"
+    datetime.now().strftime("%Y_%m_%d_%H_%M_%S") + ".csv"
 
 
 def log_run(agent, avg_reward, total_regret):

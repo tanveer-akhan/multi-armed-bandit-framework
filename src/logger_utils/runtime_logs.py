@@ -1,5 +1,5 @@
 import os
-import datetime
+from datetime import datetime
 
 
 # LOG File generated once per script run
