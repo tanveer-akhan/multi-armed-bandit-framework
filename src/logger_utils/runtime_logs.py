@@ -4,7 +4,7 @@ import datetime
 
 # LOG File generated once per script run
 LOG_FILE = "logs/" + "record_" + \
-    datetime.datetime.now().strftime("%Y%m%d%H%M%S")+".txt"
+    datetime.now().strftime("%Y%m%d%H%M%S")+".txt"
 
 os.makedirs("results", exist_ok=True)
 os.makedirs("logs", exist_ok=True)
