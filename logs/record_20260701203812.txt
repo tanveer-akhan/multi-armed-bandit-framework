@@ -1,0 +1,49 @@
+Environment Created.
+Agent Initialized with strategy : Epsilon Greedy.
+
+Agent Initialized with strategy : UCB.
+
+Agent Initialized with strategy : Explore.
+
+Epoch: 100 | Arm: 3 | Current Reward: 197.403 | Cumulative Reward : 14950.634 | Current Strategy : Epsilon Greedy
+Epoch: 200 | Arm: 6 | Current Reward: 141.050 | Cumulative Reward : 31126.344 | Current Strategy : Epsilon Greedy
+Epoch: 300 | Arm: 1 | Current Reward: 76.526 | Cumulative Reward : 48217.144 | Current Strategy : Epsilon Greedy
+Epoch: 400 | Arm: 3 | Current Reward: 195.060 | Cumulative Reward : 65474.926 | Current Strategy : Epsilon Greedy
+Epoch: 500 | Arm: 2 | Current Reward: 138.787 | Cumulative Reward : 82626.763 | Current Strategy : Epsilon Greedy
+Epoch: 600 | Arm: 3 | Current Reward: 195.599 | Cumulative Reward : 99561.103 | Current Strategy : Epsilon Greedy
+Epoch: 700 | Arm: 6 | Current Reward: 141.040 | Cumulative Reward : 116477.747 | Current Strategy : Epsilon Greedy
+Epoch: 800 | Arm: 3 | Current Reward: 195.220 | Cumulative Reward : 132779.641 | Current Strategy : Epsilon Greedy
+Epoch: 900 | Arm: 3 | Current Reward: 194.781 | Cumulative Reward : 149731.820 | Current Strategy : Epsilon Greedy
+Epoch: 1000 | Arm: 3 | Current Reward: 193.787 | Cumulative Reward : 167207.524 | Current Strategy : Epsilon Greedy
+Experiment Run Completed.
+
+Run for agent with strategy : Epsilon Greedy completed.
+
+Epoch: 100 | Arm: 3 | Current Reward: 193.171 | Cumulative Reward : 18622.524 | Current Strategy : UCB
+Epoch: 200 | Arm: 3 | Current Reward: 194.444 | Cumulative Reward : 38122.283 | Current Strategy : UCB
+Epoch: 300 | Arm: 3 | Current Reward: 195.796 | Cumulative Reward : 57635.299 | Current Strategy : UCB
+Epoch: 400 | Arm: 3 | Current Reward: 193.969 | Cumulative Reward : 77142.062 | Current Strategy : UCB
+Epoch: 500 | Arm: 3 | Current Reward: 194.836 | Cumulative Reward : 96640.284 | Current Strategy : UCB
+Epoch: 600 | Arm: 3 | Current Reward: 195.933 | Cumulative Reward : 116154.016 | Current Strategy : UCB
+Epoch: 700 | Arm: 3 | Current Reward: 195.097 | Cumulative Reward : 135680.974 | Current Strategy : UCB
+Epoch: 800 | Arm: 3 | Current Reward: 194.639 | Cumulative Reward : 155220.845 | Current Strategy : UCB
+Epoch: 900 | Arm: 3 | Current Reward: 193.834 | Cumulative Reward : 174725.284 | Current Strategy : UCB
+Epoch: 1000 | Arm: 3 | Current Reward: 196.803 | Cumulative Reward : 194256.537 | Current Strategy : UCB
+Experiment Run Completed.
+
+Run for agent with strategy : UCB completed.
+
+Epoch: 100 | Arm: 1 | Current Reward: 75.705 | Cumulative Reward : 11176.694 | Current Strategy : Explore
+Epoch: 200 | Arm: 2 | Current Reward: 139.396 | Cumulative Reward : 22848.657 | Current Strategy : Explore
+Epoch: 300 | Arm: 3 | Current Reward: 194.136 | Cumulative Reward : 33866.365 | Current Strategy : Explore
+Epoch: 400 | Arm: 2 | Current Reward: 137.864 | Cumulative Reward : 44671.816 | Current Strategy : Explore
+Epoch: 500 | Arm: 5 | Current Reward: 86.542 | Cumulative Reward : 56129.274 | Current Strategy : Explore
+Epoch: 600 | Arm: 2 | Current Reward: 140.454 | Cumulative Reward : 66799.468 | Current Strategy : Explore
+Epoch: 700 | Arm: 3 | Current Reward: 195.281 | Cumulative Reward : 77341.453 | Current Strategy : Explore
+Epoch: 800 | Arm: 4 | Current Reward: 5.949 | Cumulative Reward : 88073.517 | Current Strategy : Explore
+Epoch: 900 | Arm: 9 | Current Reward: 134.976 | Cumulative Reward : 98987.650 | Current Strategy : Explore
+Epoch: 1000 | Arm: 5 | Current Reward: 85.325 | Cumulative Reward : 109616.010 | Current Strategy : Explore
+Experiment Run Completed.
+
+Run for agent with strategy : Explore completed.
+

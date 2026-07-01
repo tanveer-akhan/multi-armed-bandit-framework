@@ -7,12 +7,12 @@ LOG_FILE = "logs/" + "record_" + \
 
 
 def take_logs(agent):
-    filename = "../results/" + "record_" + \
+    filename = "/results/" + "record_" + \
         datetime.datetime.now().strftime("%Y%m%d%H%M%S")+".txt"
     with open(filename, "w") as f:
-        f.write(str(agent.arm_select_history))
+        f.write(str(agent.actions_taken))
         f.write("")
-        f.write(str(agent.history))
+        f.write(str(agent.reward_history))
 
 
 def record_logs(log: str, filename=None):

@@ -1,0 +1,20 @@
+Environment Created.
+Agent Initialized with strategy : Epsilon Greedy.
+
+Epoch: 100 | Arm: 8 | Current Reward: 197.946 | Cumulative Reward : 12036.813 | Current Strategy : Epsilon Greedy
+Epoch: 200 | Arm: 8 | Current Reward: 199.022 | Cumulative Reward : 24962.671 | Current Strategy : Epsilon Greedy
+Epoch: 300 | Arm: 8 | Current Reward: 198.220 | Cumulative Reward : 37271.370 | Current Strategy : Epsilon Greedy
+Epoch: 400 | Arm: 8 | Current Reward: 199.021 | Cumulative Reward : 49603.038 | Current Strategy : Epsilon Greedy
+Epoch: 500 | Arm: 7 | Current Reward: 116.987 | Cumulative Reward : 60730.099 | Current Strategy : Epsilon Greedy
+Epoch: 600 | Arm: 1 | Current Reward: 46.057 | Cumulative Reward : 73462.093 | Current Strategy : Epsilon Greedy
+Experiment Run Completed.
+
+Environment Created.
+Epoch: 700 | Arm: 0 | Current Reward: 958.390 | Cumulative Reward : 131468.483 | Current Strategy : Epsilon Greedy
+Epoch: 800 | Arm: 1 | Current Reward: 701.535 | Cumulative Reward : 189607.880 | Current Strategy : Epsilon Greedy
+Epoch: 900 | Arm: 8 | Current Reward: 619.658 | Cumulative Reward : 247605.327 | Current Strategy : Epsilon Greedy
+Epoch: 1000 | Arm: 1 | Current Reward: 700.962 | Cumulative Reward : 312550.741 | Current Strategy : Epsilon Greedy
+Epoch: 1100 | Arm: 0 | Current Reward: 959.762 | Cumulative Reward : 382509.495 | Current Strategy : Epsilon Greedy
+Epoch: 1200 | Arm: 9 | Current Reward: 234.840 | Cumulative Reward : 447360.425 | Current Strategy : Epsilon Greedy
+Experiment Run Completed.
+

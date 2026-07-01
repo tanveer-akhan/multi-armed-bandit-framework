@@ -54,11 +54,14 @@ def plot_single_arm_estimate(agent, arm_no, max_steps=None, ax=None, fig=None, c
         label = custom_label + f" Arm {arm_no}"
 
     # Plot estimate
-    ax.plot(agent.estimate_history[arm_no]
-            [:max_steps],  label=label)
+    line, = ax.plot(agent.estimate_history[arm_no]
+                    [:max_steps],  label=label)
+
+    # Get line color
+    line_color = line.get_color()
 
     # Plot true value
-    ax.axhline(y=agent.environment.base_truth[arm_no],
+    ax.axhline(y=agent.environment.base_truth[arm_no], color=line_color,
                linestyle='--', label=f"True Arm {arm_no}", alpha=0.6)
 
     put_label(ax, custom_title, plot=plot)
