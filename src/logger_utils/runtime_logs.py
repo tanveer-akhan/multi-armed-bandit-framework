@@ -1,3 +1,4 @@
+import os
 import datetime
 
 
@@ -5,10 +6,13 @@ import datetime
 LOG_FILE = "logs/" + "record_" + \
     datetime.datetime.now().strftime("%Y%m%d%H%M%S")+".txt"
 
+os.makedirs("results", exist_ok=True)
+os.makedirs("logs", exist_ok=True)
+
 
 def take_logs(agent):
-    filename = "/results/" + "record_" + \
-        datetime.datetime.now().strftime("%Y%m%d%H%M%S")+".txt"
+    filename = "results/" + "record_" + \
+        datetime.now().strftime("%Y%m%d%H%M%S")+".txt"
     with open(filename, "w") as f:
         f.write(str(agent.actions_taken))
         f.write("")
