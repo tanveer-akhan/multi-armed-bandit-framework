@@ -28,23 +28,23 @@ python -m src.main
 
 ## Implemented Strategies
 
-| Strategy               | Description                                     |
-|------------------------|-------------------------------------------------|
-| Exploration            | Arm is selected randomly                        |
-| Exploitation           | The arm with the best known value is selected   |
-| Epsilon Greedy         | Explores with (ε) and Exploits with  (1-ε)      |
-| Upper Confidence Bound | Balances estimates and uncertainty              |
+| Strategy               | Description                                   |
+| ---------------------- | --------------------------------------------- |
+| Exploration            | Arm is selected randomly                      |
+| Exploitation           | The arm with the best known value is selected |
+| Epsilon Greedy         | Explores with (ε) and Exploits with (1-ε)     |
+| Upper Confidence Bound | Balances estimates and uncertainty            |
 
 ## Example Results
 
-![alt text](image-1.png)
+![alt text](graph_with_multiple_arm.webp)
 
 ## Project Structure
 
-src/          core framework  
-examples/     ready-to-run demos  
-results/      logs and output plots  
-tests/        unit tests
+src/ core framework  
+examples/ ready-to-run demos  
+results/ logs and output plots  
+tests/ unit tests
 
 ## Future Work
 

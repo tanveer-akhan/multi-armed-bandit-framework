@@ -1,5 +1,0 @@
-Environment Created.
-Agent Initialized with strategy : UCB.
-
-Agent Initialized with strategy : Epsilon Greedy.
-

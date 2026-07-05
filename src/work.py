@@ -33,6 +33,12 @@ def main():
     agent = Agent(environment=env, strategy=Explore())
 
     # Run experiment
-    run_experiment(agent=agent, steps=10000)
+    run_experiment(agent=agent, steps=3000)
+
+    #Plot Imagine
+    fig = plot_multiple_arm_estimate(agent, only_top=True)
+
+    #Save Image
+    save_image_to_disk(fig, 'Regret_curve')
 
 main()
